@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Python / Notebooks
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+
+# Data & outputs (keep large/raw data local)
+data/
+datasets/
+*.csv
+*.tsv
+*.parquet
+*.zip
+*.log
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Build / cache
+dist/
+build/
