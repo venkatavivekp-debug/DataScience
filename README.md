@@ -16,4 +16,4 @@ Perceptron & 3-layer NN with GD vs IGD; Scala code + HTML results.
 Project1/ (docs/, README.md) · Project2/ (docs/, results/, src/, README.md)
 
 ## Contact
-venkatavivekpanguluri@uga.edu · GitHub: venkatavivekp-debug
+vp77938@uga.edu · GitHub: venkatavivekp-debug
