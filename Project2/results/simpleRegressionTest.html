@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css"></head><body style="color: rgb(32, 33, 34); font-family: Lato, sans-serif; font-size: 19px;"><p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">/** The `simpleRegressionTest` main function to test the `SimpleRegression` class.</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp;*&nbsp; &nbsp; &nbsp; y = b0 + b1 * x</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp;*&nbsp; &gt; runMain scalation.modeling.simpleRegressionTest</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp;*/</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">@main def simpleRegressionTest (): Unit =</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; // 4 data points: constant x1</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; val x = MatrixD ((4, 2), 1, 1, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // x 4-by-2 matrix</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1, 2,</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1, 3,</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1, 4)</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; val y = VectorD (1, 3, 3, 4) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // y vector</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; banner ("Test1: Simple Regression Model: y = b_0 + b_1 x + e")</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; println (s"x = $x")</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; println (s"y = $y")</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; val mod = new SimpleRegression (x, y)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // create a simple regression model</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; mod.trainNtest ()()&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // train and test the model</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; val yp = mod.predict (x)</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">&nbsp; &nbsp; new Plot (x(?, 1), y, yp, "plot y and yp vs. x", lines = true)</span></strong></p>
+<p><strong><span style="font-family: 'courier new', courier, sans-serif; font-size: 14px;">end simpleRegressionTest</span></strong></p></body></html>
