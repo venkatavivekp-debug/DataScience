@@ -27,3 +27,5 @@ build/
 
 # archives
 *.zip
+__MACOSX/
+~.docx
