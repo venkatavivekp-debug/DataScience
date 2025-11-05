@@ -24,3 +24,6 @@ datasets/
 # Build / cache
 dist/
 build/
+
+# archives
+*.zip
