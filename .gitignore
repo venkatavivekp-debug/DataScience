@@ -42,3 +42,7 @@ __MACOSX/
 
 .venv/
 .ipynb_checkpoints/
+
+# Local env & notebook cache
+.venv/
+.ipynb_checkpoints/
